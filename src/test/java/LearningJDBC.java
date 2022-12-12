@@ -67,13 +67,12 @@ public class LearningJDBC {
 
         ResultSet allEmployees = statement.executeQuery("SELECT * FROM employees");
 
+
         while (allEmployees.next()) {
             System.out.println("FirstName: " + allEmployees.getString("firstName"));
             System.out.println("JobTitle: " + allEmployees.getString("jobTitle"));
             System.out.println("**********************");
         }
-
-
     }
 
     @Test
@@ -106,10 +105,6 @@ public class LearningJDBC {
         System.out.println(allCustomers.getString("country"));
 
 
-    }
 
-    @AfterClass
-    public void closeConnection() throws SQLException {
-        connection.close();
     }
 }
